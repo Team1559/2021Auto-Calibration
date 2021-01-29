@@ -157,7 +157,7 @@ public class Robot extends TimedRobot {
     CANSparkMax leftMotor = setupCANSparkMax(11, Sides.LEFT, false);
 
     CANSparkMax leftFollowerID13 = setupCANSparkMax(13, Sides.FOLLOWER, false);
-    leftFollowerID13.follow(leftMotor, true);
+    leftFollowerID13.follow(leftMotor, true);//this was what was changed
         
     
 
