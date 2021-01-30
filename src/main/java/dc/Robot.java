@@ -154,16 +154,16 @@ public class Robot extends TimedRobot {
     stick = new Joystick(0);
     
     // create left motor
-    CANSparkMax leftMotor = setupCANSparkMax(11, Sides.LEFT, true);
+    CANSparkMax leftMotor = setupCANSparkMax(11, Sides.LEFT, false);
 
-    CANSparkMax leftFollowerID13 = setupCANSparkMax(13, Sides.FOLLOWER);
-    leftFollowerID13.follow(leftMotor, false );
+    CANSparkMax leftFollowerID13 = setupCANSparkMax(13, Sides.FOLLOWER, false);
+    leftFollowerID13.follow(leftMotor);
         
     
 
-    CANSparkMax rightMotor = setupCANSparkMax(12, Sides.RIGHT, true);
-    CANSparkMax rightFollowerID14 = setupCANSparkMax(14, Sides.FOLLOWER);
-    rightFollowerID14.follow(rightMotor, false);
+    CANSparkMax rightMotor = setupCANSparkMax(12, Sides.RIGHT, false);
+    CANSparkMax rightFollowerID14 = setupCANSparkMax(14, Sides.FOLLOWER, false);
+    rightFollowerID14.follow(rightMotor);
     drive = new DifferentialDrive(leftMotor, rightMotor);
     drive.setDeadband(0);
 
