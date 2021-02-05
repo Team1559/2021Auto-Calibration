@@ -108,7 +108,8 @@ public class Robot extends TimedRobot {
     if (side != Sides.FOLLOWER) {
     
       
-      CANEncoder encoder = motor.getAlternateEncoder(AlternateEncoderType.kQuadrature, ENCODER_EDGES_PER_REV);
+      //CANEncoder encoder = motor.getAlternateEncoder(AlternateEncoderType.kQuadrature, ENCODER_EDGES_PER_REV);
+      CANEncoder encoder = new CANEncoder(motor);
 
 
 
