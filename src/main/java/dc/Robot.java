@@ -237,7 +237,7 @@ public class Robot extends TimedRobot {
   */
   @Override
   public void autonomousPeriodic() {
-    System.out.println(autoSpeedEntry);
+    
     // Retrieve values to send back before telling the motors to do something
     double now = Timer.getFPGATimestamp();
 
@@ -256,6 +256,8 @@ public class Robot extends TimedRobot {
     // Retrieve the commanded speed from NetworkTables
     double autospeed = autoSpeedEntry.getDouble(0);
     priorAutospeed = autospeed;
+
+    System.out.println(autospeed); //changed from(autoSpeedEntry)
 
     // command motors to do things
     drive.tankDrive(
