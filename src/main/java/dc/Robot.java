@@ -109,7 +109,7 @@ public class Robot extends TimedRobot {
     
       
       //CANEncoder encoder = motor.getAlternateEncoder(AlternateEncoderType.kQuadrature, ENCODER_EDGES_PER_REV);
-      CANEncoder encoder = new CANEncoder(motor);
+      CANEncoder encoder = motor.getEncoder();
 
 
 
@@ -120,7 +120,7 @@ public class Robot extends TimedRobot {
         // set right side methods = encoder methods
 
 
-        encoder.setInverted(true);
+        //encoder.setInverted(false);
         rightEncoderPosition = ()
           -> encoder.getPosition() * encoderConstant;
         rightEncoderRate = ()
@@ -128,7 +128,7 @@ public class Robot extends TimedRobot {
 
         break;
       case LEFT:
-        encoder.setInverted(false);
+        //encoder.setInverted(false);
         leftEncoderPosition = ()
           -> encoder.getPosition() * encoderConstant;
         leftEncoderRate = ()
