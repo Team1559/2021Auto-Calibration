@@ -120,11 +120,11 @@ public class Robot extends TimedRobot {
         // set right side methods = encoder methods
 
 
-        //encoder.setInverted(false);
+        //encoder.setInverted(true);
         rightEncoderPosition = ()
-          -> encoder.getPosition() * encoderConstant;
+          -> -encoder.getPosition() * encoderConstant;
         rightEncoderRate = ()
-          -> encoder.getVelocity() * encoderConstant / 60.;
+          -> -encoder.getVelocity() * encoderConstant / 60.;
 
         break;
       case LEFT:
